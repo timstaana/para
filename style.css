@@ -1,0 +1,27 @@
+  @import url("https://fonts.googleapis.com/css?family=Roboto-Mono&display=swap");
+
+  html, body {
+    overflow: hidden;
+    overscroll-behavior: none
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", sans-serif;
+    background-color: #dce5ec;
+  }
+
+  canvas {
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
