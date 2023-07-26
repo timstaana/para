@@ -19,9 +19,13 @@ let cameraSpeed = 10;
 let lastMovementTime = 0;
 let noMovementTimeout = 1000; // 1 seconds in milliseconds
 
-
+let img;
+let img1;
+let img2;
 function preload() {
-  
+  img = loadImage('para.png');
+  img1 = loadImage('sleeping.png');
+  img2 = loadImage('thoughtballoon.png');
 }
 
 function setup() {
@@ -97,6 +101,15 @@ function draw() {
         }
       }
     }
+    
+    push();
+    translate(
+      sin(frameCount / 28)*10 + 0,
+      cos(frameCount / 14)*10 + 0,
+      -100
+    );
+    image(img, 0, 0, 2480/5, 3508/5);
+    pop();
 
     push();
     translate(
@@ -143,15 +156,16 @@ function draw() {
     pop();
     
     
-    push();
-    translate(
-      sin(frameCount / 333)*50 + width / 2,
-      cos(frameCount / 250)*50 + height / 2,
-      cos(frameCount / 50)*350
-    );
-    fill(111)
-    plane(150, 150);
-    pop();
+    // push();
+    // translate(
+    //   sin(frameCount / 333)*50 + width / 2,
+    //   cos(frameCount / 250)*50 + height / 2,
+    //   cos(frameCount / 50)*350
+    // );
+    // rotateZ(cos(frameCount / 50))
+    // texture(img)
+    // plane(150, 150);
+    // pop();
     
     push();
     translate(
@@ -159,7 +173,7 @@ function draw() {
       cos(frameCount / 92)*500 + height / 2,
       cos(frameCount / 50)*350 + 150
     );
-    fill(111)
+    texture(img2)
     plane(150, 150);
     pop();
 
